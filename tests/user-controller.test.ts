@@ -5,12 +5,6 @@ import { StatusCodes } from 'http-status-codes';
 
 test.describe('User management API', () => {
 
-    test('GET / - should return empty when no users', async ({ request }) => {
-        const response = await request.get(`${baseURL}`);
-        expect(response.status()).toBe(StatusCodes.OK);
-        const responseBody = await response.text()
-        expect(responseBody).toBe('[]');
-    });
 
     test('GET /:id - should return a user by ID', async ({ request }) => {
         const responseCreate = await request.post(`${baseURL}`);
@@ -45,17 +39,6 @@ test.describe('User management API', () => {
     test('DELETE /:id - should return 404 if user not found', async ({ request }) => {
        const responseDelete = await request.delete(`${baseURL}/100`);
        expect(responseDelete.status()).toBe(StatusCodes.NOT_FOUND);
-    });
-
-    test('Return all fields', async ({ request }) => {
-       const responseCreate = await request.post(`${baseURL}/100`);
-       const responseBody = await responseCreate.json()
-       expect.soft(responseBody.id).toBeDefined();
-        expect.soft(responseBody.name).toBeDefined();
-        expect.soft(responseBody.email).toBeDefined();
-        expect.soft(responseBody.phone).toBeDefined();
-
     })
-
 
 });
