@@ -56,6 +56,11 @@ router.get('/:id', (req: Request, res: Response) => {
     }
 });
 
+router.delete('/', (req, res) => {
+    users = [];
+    res.status(200).send('All users deleted');
+});
+
 
 // Delete a user by ID
 router.delete('/:id', (req: Request, res: Response) => {
