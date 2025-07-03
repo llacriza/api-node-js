@@ -1,16 +1,20 @@
 let arrNum = [60, 7, 33];
+console.log(arrNum);
 console.log(arrNum.length);
 
 let arrString = ["Divine","Molly"]
 arrString.push("Jessica");
+console.log(arrString);
 console.log(arrString.length);
 
 let arrStringDell = ["Dog", "Cat", "Bird"];
 arrStringDell.pop();
+console.log(arrStringDell);
 console.log(arrStringDell.length);
 
 let arrNumEmpty: number[] = [];
 arrNumEmpty.push(10, 67);
+console.log(arrNumEmpty);
 console.log(arrNumEmpty.length);
 
 let loopArraySimple = [17, 734, 6, 9, 10];
