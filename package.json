@@ -4,6 +4,7 @@
   "type": "module",
   "main": "dist/index.js",
   "scripts": {
+    "prettier:format": "prettier --write",
     "build": "tsc",
     "start": "node dist/index.js",
     "dev": "tsx src/index.ts"
@@ -24,6 +25,7 @@
     "http-status-codes": "^2.3.0",
     "jest": "^29.7.0",
     "nodemon": "^3.1.7",
+    "prettier": "^3.6.2",
     "ts-jest": "^29.2.5",
     "tsx": "^4.19.2",
     "typescript": "^5.6.3"
